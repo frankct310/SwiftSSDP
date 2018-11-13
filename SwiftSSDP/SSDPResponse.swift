@@ -18,6 +18,25 @@ public enum SSDPMessage {
     case notify
 }
 
+/// Case insensitive indexing for things like location etc
+extension Dictionary where Key == String {
+
+    subscript(caseInsensitive key: Key) -> Value? {
+        get {
+            if let k = keys.first(where: { $0.caseInsensitiveCompare(key) == .orderedSame }) {
+                return self[k]
+            }
+            return nil
+        }
+        set {
+            if let k = keys.first(where: { $0.caseInsensitiveCompare(key) == .orderedSame }) {
+                self[k] = newValue
+            } else {
+                self[key] = newValue
+            }
+        }
+    }
+}
 //
 // MARK: -
 //
@@ -171,7 +190,7 @@ extension SSDPMSearchResponse {
             let maxAgeRegEx = try! NSRegularExpression(pattern: "max\\-age[ \t]*=[ \t]*([0-9]+)")
             var matches: [String] = []
             for match in maxAgeRegEx.matches(in: cacheControlString, range: NSRange(location:0, length: cacheControlString.utf8.count)) {
-                let capturedRange = match.rangeAt(1)
+                let capturedRange = match.range(at: 1)
                 if !NSEqualRanges(capturedRange, NSMakeRange(NSNotFound, 0)) {
                     let theResult = (cacheControlString as NSString).substring(with: capturedRange)
                     matches.append(theResult)
@@ -203,7 +222,7 @@ extension SSDPMSearchResponse {
         mutableHeaders.removeValue(forKey: SSDPHeaderKeys.ext)
         
         // LOCATION
-        guard let location = headers[SSDPHeaderKeys.location], let locationUrl = URL(string: location) else {
+        guard let location = headers[caseInsensitive:SSDPHeaderKeys.location], let locationUrl = URL(string: location) else {
             return nil
         }
         self.location = locationUrl
