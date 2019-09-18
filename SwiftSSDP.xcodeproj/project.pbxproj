@@ -32,15 +32,8 @@
 		3C8F9C791E78FD0600EC88A2 /* SSDPUPnP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8F9C5A1E78FD0600EC88A2 /* SSDPUPnP.swift */; };
 		3C8F9C7A1E78FD0600EC88A2 /* SSDPUPnP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8F9C5A1E78FD0600EC88A2 /* SSDPUPnP.swift */; };
 		3C9049AA1E7908F6001A8C1C /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C9049A71E7908F6001A8C1C /* CocoaAsyncSocket.framework */; };
-		3C9049AC1E7908F6001A8C1C /* Weak.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C9049A91E7908F6001A8C1C /* Weak.framework */; };
 		3C9049B01E790901001A8C1C /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C9049AD1E790901001A8C1C /* CocoaAsyncSocket.framework */; };
-		3C9049B21E790901001A8C1C /* Weak.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C9049AF1E790901001A8C1C /* Weak.framework */; };
-		3C9049B61E790913001A8C1C /* Weak.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C9049B41E790913001A8C1C /* Weak.framework */; };
-		3CF898021E80C3DF00DDE04F /* SwiftAbstractLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CF898011E80C3DF00DDE04F /* SwiftAbstractLogger.framework */; };
-		3CF898041E80C3EA00DDE04F /* SwiftAbstractLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CF898031E80C3EA00DDE04F /* SwiftAbstractLogger.framework */; };
-		3CF898061E80C3F100DDE04F /* SwiftAbstractLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CF898051E80C3F100DDE04F /* SwiftAbstractLogger.framework */; };
 		F72F0CC5203FDDBD00759FB4 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C9049B71E79091D001A8C1C /* CocoaAsyncSocket.framework */; };
-		F72F0CC6203FDDC400759FB4 /* SwiftAbstractLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CF897FF1E80C3D700DDE04F /* SwiftAbstractLogger.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,16 +54,8 @@
 		3C8F9C7C1E78FD1300EC88A2 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		3C8F9C7D1E78FD1300EC88A2 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		3C9049A71E7908F6001A8C1C /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaAsyncSocket.framework; path = Carthage/Build/Mac/CocoaAsyncSocket.framework; sourceTree = "<group>"; };
-		3C9049A91E7908F6001A8C1C /* Weak.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Weak.framework; path = Carthage/Build/Mac/Weak.framework; sourceTree = "<group>"; };
 		3C9049AD1E790901001A8C1C /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaAsyncSocket.framework; path = Carthage/Build/tvOS/CocoaAsyncSocket.framework; sourceTree = "<group>"; };
-		3C9049AF1E790901001A8C1C /* Weak.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Weak.framework; path = Carthage/Build/tvOS/Weak.framework; sourceTree = "<group>"; };
-		3C9049B41E790913001A8C1C /* Weak.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Weak.framework; path = Carthage/Build/watchOS/Weak.framework; sourceTree = "<group>"; };
 		3C9049B71E79091D001A8C1C /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaAsyncSocket.framework; path = Carthage/Build/iOS/CocoaAsyncSocket.framework; sourceTree = "<group>"; };
-		3C9049B91E79091D001A8C1C /* Weak.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Weak.framework; path = Carthage/Build/iOS/Weak.framework; sourceTree = "<group>"; };
-		3CF897FF1E80C3D700DDE04F /* SwiftAbstractLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftAbstractLogger.framework; path = Carthage/Build/iOS/SwiftAbstractLogger.framework; sourceTree = "<group>"; };
-		3CF898011E80C3DF00DDE04F /* SwiftAbstractLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftAbstractLogger.framework; path = Carthage/Build/watchOS/SwiftAbstractLogger.framework; sourceTree = "<group>"; };
-		3CF898031E80C3EA00DDE04F /* SwiftAbstractLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftAbstractLogger.framework; path = Carthage/Build/tvOS/SwiftAbstractLogger.framework; sourceTree = "<group>"; };
-		3CF898051E80C3F100DDE04F /* SwiftAbstractLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftAbstractLogger.framework; path = Carthage/Build/Mac/SwiftAbstractLogger.framework; sourceTree = "<group>"; };
 		3CF8980A1E80C88300DDE04F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,7 +65,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F72F0CC5203FDDBD00759FB4 /* CocoaAsyncSocket.framework in Frameworks */,
-				F72F0CC6203FDDC400759FB4 /* SwiftAbstractLogger.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,8 +72,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CF898021E80C3DF00DDE04F /* SwiftAbstractLogger.framework in Frameworks */,
-				3C9049B61E790913001A8C1C /* Weak.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,8 +80,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C9049B01E790901001A8C1C /* CocoaAsyncSocket.framework in Frameworks */,
-				3CF898041E80C3EA00DDE04F /* SwiftAbstractLogger.framework in Frameworks */,
-				3C9049B21E790901001A8C1C /* Weak.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,8 +88,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C9049AA1E7908F6001A8C1C /* CocoaAsyncSocket.framework in Frameworks */,
-				3CF898061E80C3F100DDE04F /* SwiftAbstractLogger.framework in Frameworks */,
-				3C9049AC1E7908F6001A8C1C /* Weak.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,14 +156,6 @@
 				3C9049B71E79091D001A8C1C /* CocoaAsyncSocket.framework */,
 				3C9049AD1E790901001A8C1C /* CocoaAsyncSocket.framework */,
 				3C9049A71E7908F6001A8C1C /* CocoaAsyncSocket.framework */,
-				3CF898051E80C3F100DDE04F /* SwiftAbstractLogger.framework */,
-				3CF898031E80C3EA00DDE04F /* SwiftAbstractLogger.framework */,
-				3CF898011E80C3DF00DDE04F /* SwiftAbstractLogger.framework */,
-				3CF897FF1E80C3D700DDE04F /* SwiftAbstractLogger.framework */,
-				3C9049B91E79091D001A8C1C /* Weak.framework */,
-				3C9049B41E790913001A8C1C /* Weak.framework */,
-				3C9049AF1E790901001A8C1C /* Weak.framework */,
-				3C9049A91E7908F6001A8C1C /* Weak.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -387,7 +357,6 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/CocoaAsyncSocket.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/SwiftAbstractLogger.framework",
 			);
 			name = "Carthage Copy Frameworks";
 			outputPaths = (
@@ -539,7 +508,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.paulbates.SwiftSSDP;
@@ -577,7 +546,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.paulbates.SwiftSSDP;
 				PRODUCT_NAME = SwiftSSDP;
@@ -636,7 +605,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -697,7 +666,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;

@@ -8,8 +8,14 @@
 
 import Foundation
 import CocoaAsyncSocket
-import SwiftAbstractLogger
+import os.log
 
+
+let bundleId = "com.paulbates.SwiftSSDP"
+
+extension OSLog {
+    static let ssdp = OSLog(subsystem: bundleId, category: "ssdpDiscovery")
+}
 /// FRANKC: simple weak
 class Weak<T: AnyObject> {
     weak var object: T?
@@ -130,7 +136,7 @@ public class SSDPDiscovery: NSObject {
         if let searchTarget = responseSearchTarget {
             // We should not be getting responses with ssdp:all
             if searchTarget == .all {
-                SwiftAbstractLogger.logWarning("Received MSEARCH response with ssdp:all")
+                os_log(.error,log:.ssdp, "Received MSEARCH response with ssdp:all")
                 return;
             }
             
@@ -267,9 +273,9 @@ extension SSDPDiscovery: GCDAsyncUdpSocketDelegate {
     
     public func udpSocket(_ sock: GCDAsyncUdpSocket, didNotConnect error: Error?) {
         if (error != nil) {
-            SwiftAbstractLogger.logError(category: loggerDiscoveryCategory, "Unable to connect \(String(describing: error))")
+            os_log(.error, log: .ssdp, "Unable to connect %@", String(describing:error))
         } else {
-            SwiftAbstractLogger.logError(category: loggerDiscoveryCategory, "Unable to connect")
+            os_log(.error, log: .ssdp, "Unable to connect")
         }
     }
     
@@ -278,25 +284,25 @@ extension SSDPDiscovery: GCDAsyncUdpSocketDelegate {
     
     public func udpSocket(_ sock: GCDAsyncUdpSocket, didNotSendDataWithTag tag: Int, dueToError error: Error?) {
         if (error != nil) {
-            SwiftAbstractLogger.logError(category: loggerDiscoveryCategory, "Unable to send data \(String(describing: error))")
+            os_log(.error, log: .ssdp, "Unable to send data %@", String(describing:error))
         } else {
-            SwiftAbstractLogger.logError(category: loggerDiscoveryCategory, "Unable to send data")
+            os_log(.error, log: .ssdp, "Unable to send data")
         }
     }
     
     public func udpSocket(_ sock: GCDAsyncUdpSocket, didReceive data: Data, fromAddress address: Data, withFilterContext filterContext: Any?) {
-        SwiftAbstractLogger.logVerbose(category: loggerDiscoveryCategory, "M-SEARCH response handled")
-        SwiftAbstractLogger.logDebug(category: loggerDiscoveryCategory, String(data: data, encoding: .utf8)!)
+        os_log(.info, log: .ssdp, "M-SEARCH response handled: %@", String(data:data, encoding: .utf8) ?? "nil")
+
         
         // Ensure we have parsable data
         guard let messageString = String(data: data, encoding: .utf8) else {
-            SwiftAbstractLogger.logError(category: loggerDiscoveryCategory, "Unable to parse M-SEARCH response")
+            os_log(.error, log: .ssdp, "Unable to parse M-SEARH response")
             return
         }
         
         // Construct a real message based on parsing the string message
         guard let message = SSDPMessageParser.parse(response: messageString) else {
-            SwiftAbstractLogger.logError(category: loggerDiscoveryCategory, "incomplete M-SEARCH response\n\(messageString)")
+            os_log(.error,log: .ssdp, "incomplete M-SEARCH response\n%@",messageString)
             return
         }
         

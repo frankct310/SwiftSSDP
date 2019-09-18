@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import SwiftAbstractLogger
+import os.log
 
 /// SSDPDiscovery based session returned from `SSDPDiscovery`'s `startDiscovery`.
 ///
@@ -149,7 +149,7 @@ public class SSDPDiscoverySession: Equatable {
         
         // Log a check to ensure the session is correctly closed
         if now.timeIntervalSince(self.checkDate) > 30 {
-            logWarning(category: loggerDiscoveryCategory, "Session has been running longer than 30 seconds!")
+            os_log(.error, log:.ssdp, "Session has been running longer than 30 seconds")
             self.checkDate = now
         }
     }
