@@ -34,8 +34,9 @@ public struct SSDPMSearchResponse {
 //
 
 extension SSDPMSearchResponse: Hashable {
-    public var hashValue: Int {
-        return (31 &* self.usn.hashValue) &+ self.location.hashValue
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(self.usn)
+        hasher.combine(self.location)
     }
 }
 

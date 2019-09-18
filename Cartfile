@@ -7,4 +7,4 @@ github "pryomoax/SwiftAbstractLogger.git" ~> 0.3
 github "robbiehanson/CocoaAsyncSocket" ~> 7.6
 
 # Weak
-github "nvzqz/Weak" "head"
+#github "nvzqz/Weak" "head"

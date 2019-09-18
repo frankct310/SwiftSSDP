@@ -9,8 +9,14 @@
 import Foundation
 import CocoaAsyncSocket
 import SwiftAbstractLogger
-import Weak
 
+/// FRANKC: simple weak
+class Weak<T: AnyObject> {
+    weak var object: T?
+    init(_ value: T) {
+        self.object = value
+    }
+}
 //
 // MARK: - Protocols
 //
@@ -53,7 +59,7 @@ public class SSDPDiscovery: NSObject {
     public static let ssdpPort: Int = 1900
     
     /// Singleton access to a discovery operating on the main dispatch queue
-    open static let defaultDiscovery = SSDPDiscovery()
+    public static let defaultDiscovery = SSDPDiscovery()
     
     /// Private initialization using the global queue
     private override init() {
